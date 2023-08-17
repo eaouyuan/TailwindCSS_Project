@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+  
 @layer components {
   .popover-btn {
     @apply w-[39px] h-[39px] p-2.5 ml-2 rounded-full bg-fb-popover flex justify-center items-center cursor-pointer active:bg-fb-active;
@@ -18,5 +18,20 @@
     @apply object-cover w-full h-full transition-transform duration-500 transform hover:scale-105;
   }
 
+  .card{
+    @apply rounded-lg mt-4 px-4 py-3 bg-fb-card;
+  }
   
+}
+
+/*  Chrome, Safari and Opera */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-width */
+.no-scrollbar {
+  scrollbar-width: none;
 }

@@ -208,7 +208,7 @@ const storyList = document.getElementById('story-list')
 
 function renderStoryItem() {
 
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 14; i++) {
     const divBox = document.createElement('div')
     divBox.classList.add('flex-1', 'px-[4px]', 'min-w-[120px]', 'cursor-pointer')
 
