@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>耀元TailwindCSS教學</title>
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
   </head>
   <body class="bg-fb-bg">
     <header
@@ -316,14 +321,20 @@
       <div class="max-w-[744px] w-full mx-auto px-4">
         <!-- 限時動態 -->
         <div class="relative">
-          <div
-            class="flex overflow-x-auto no-scrollbar"
-            id="story-list"
-          >
+          <div class="flex overflow-x-auto no-scrollbar" id="story-list">
             <div class="flex-1 px-[4px] min-w-[120px] cursor-pointer">
               <div class="h-full flex flex-col">
                 <div class="h-full overflow-hidden">
-                  <img class="object-cover w-full h-full duration-500 hover:scale-105" src="https://bruce-fe-fb.web.app/image/avator.png" />
+                  <img
+                    class="
+                      object-cover
+                      w-full
+                      h-full
+                      duration-500
+                      hover:scale-105
+                    "
+                    src="https://bruce-fe-fb.web.app/image/avator.png"
+                  />
                 </div>
                 <div class="bg-fb-card pt-6 px-2 pb-2 relative">
                   <button
@@ -351,7 +362,6 @@
             </div>
 
             <!-- <div class="flex-1 px-[4px] min-w-[120px] cursor-pointer">後面都是布魯斯的動態</div> -->
-
           </div>
           <button
             class="
@@ -370,36 +380,64 @@
 
         <!-- 在想些什麼？ -->
         <div class="rounded-lg mt-4 px-4 py-3 bg-fb-card">
-  
           <div class="flex pb-4">
-            <div
-              class="w-[40px] rounded-full overflow-hidden mr-3"
-            >
+            <div class="w-[40px] rounded-full overflow-hidden mr-3">
               <img src="https://bruce-fe-fb.web.app/image/avator.png" />
             </div>
             <div class="bg-fb-input flex-1 rounded-full flex items-center">
-              <p class="text-left text-sm pl-3 text-gray-400 ">
+              <p class="text-left text-sm pl-3 text-gray-400">
                 郭小元，在想些什麼？
               </p>
             </div>
-          </div> 
-        
-          <div
-            class="border-t border-gray-700 flex pt-3"
-          >
-            <button class="flex-1 h-[40px] rounded-lg hover:bg-fb-input flex items-center justify-center">
+          </div>
+
+          <div class="border-t border-gray-700 flex pt-3">
+            <button
+              class="
+                flex-1
+                h-[40px]
+                rounded-lg
+                hover:bg-fb-input
+                flex
+                items-center
+                justify-center
+              "
+            >
               <div class="w-[16px]">
-                <img src="https://bruce-fe-fb.web.app/image/camera.svg" alt="" />
+                <img
+                  src="https://bruce-fe-fb.web.app/image/camera.svg"
+                  alt=""
+                />
               </div>
               <p class="text-gray-400 text-sm pl-1.5">直播視訊</p>
             </button>
-            <button class="flex-1 h-[40px] rounded-lg hover:bg-fb-input flex items-center justify-center">
+            <button
+              class="
+                flex-1
+                h-[40px]
+                rounded-lg
+                hover:bg-fb-input
+                flex
+                items-center
+                justify-center
+              "
+            >
               <div class="w-[16px]">
                 <img src="https://bruce-fe-fb.web.app/image/photo.svg" alt="" />
               </div>
               <p class="text-gray-400 text-sm pl-1.5">相片／影片</p>
             </button>
-            <button class="flex-1 h-[40px] rounded-lg hover:bg-fb-input flex items-center justify-center">
+            <button
+              class="
+                flex-1
+                h-[40px]
+                rounded-lg
+                hover:bg-fb-input
+                flex
+                items-center
+                justify-center
+              "
+            >
               <div class="w-[16px]">
                 <img src="https://bruce-fe-fb.web.app/image/feel.svg" alt="" />
               </div>
@@ -410,48 +448,48 @@
 
         <!-- 開包廂 -->
         <div class="card pr-0 flex">
-          <button
-            class="
-              mr-4
-              px-4
-              h-[40px]
-              ring-2 ring-gray-600
-              flex
-              items-center
-              rounded-full
-              focus:outline-none
-            "
-          >
-            <div class="w-[24px]">
-              <img src="https://bruce-fe-fb.web.app/image/video.svg" alt="" />
-            </div>
-            <p class="ml-2 text-fb text-sm font-bold">
-              建立包廂
-            </p>
-          </button>
-
-          <div class="w-[55px]">
-            <div class="relative w-[40px] cursor-pointer">
-              <div class="overflow-hidden rounded-full">
-                <img src="https://bruce-fe-fb.web.app/image/avator.png" alt="">
+          <!-- Swiper -->
+          <div class="swiper fb-live">
+            <div class="swiper-wrapper" id="swiper-wrapper-live">
+              <div class="swiper-slide">
+                <button
+                  class="
+                    mr-4
+                    px-4
+                    h-[40px]
+                    ring-2 ring-gray-600
+                    flex
+                    items-center
+                    rounded-full
+                    focus:outline-none
+                  "
+                >
+                  <div class="w-[24px]">
+                    <img
+                      src="https://bruce-fe-fb.web.app/image/video.svg"
+                      alt=""
+                    />
+                  </div>
+                  <p class="ml-2 text-fb text-sm font-bold">建立包廂</p>
+                </button>
               </div>
-              <div class="w-[10px] h-[10px] rounded-full bg-green-500 absolute bottom-0 right-0 ring-gray-900 ring"></div>
+
             </div>
+
+            <div class="swiper-button-next content-center "></div>
+            <div class="swiper-button-prev"></div>
           </div>
         </div>
-
-
-
       </div>
 
       <!-- 右側聯絡人 -->
       <div
         id="right-block"
         class="hidden sticky top-main-span max-w-[360px] w-full h-full lg:block"
-      >
-      </div>
+      ></div>
     </main>
-
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>
