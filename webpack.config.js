@@ -12,7 +12,7 @@ module.exports = {
   mode: 'development',
   // 出口
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
     filename: 'index.[hash].js',
   },
   // loader
